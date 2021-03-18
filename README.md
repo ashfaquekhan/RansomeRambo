@@ -15,4 +15,6 @@
 4. But first remember to add a key.(k="bImD4glbqcfVl7EyyTVJxqc6N_bdu6UR_yDte2tqerU=" -> I generated this one, you can generate key using the cryptography lib in python)
    ![image](https://user-images.githubusercontent.com/42895491/111678524-65af2f00-8846-11eb-8788-34d0bf7ac2b8.png)
     
+ 
+https://youtu.be/LSw-DwUWDBM ---- testing video.
     
