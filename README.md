@@ -1,4 +1,7 @@
 # RansomeRambo
+RasomeRambo.py is the main file which can help you understand the whole thing.
+RasomeRambo_SP-BITE.py is a programm where superPaste(one of my previous project) is injected with RansomeRambo(if you want to use this programm inside any project of yours , you need to plant it manually).
+
 1. A ransomeware which can encrypt all the files(all the extensions the user has selected) and decrypt them , all via a remote access
 
 2. You can add as many extensions you want to encrypt.
