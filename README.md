@@ -17,4 +17,3 @@
     
  
 https://youtu.be/LSw-DwUWDBM ---- testing video.
-https://github.com/ashfaquekhan/RansomeRambo/issues/5#issue-1234133610
